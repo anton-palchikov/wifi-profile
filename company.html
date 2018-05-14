@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="Robots" content="INDEX, FOLLOW"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <link rel="stylesheet" href="plugins/datepicker/daterangepicker.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>World Wi-Fi – децентрализованная бесплатная Wi-Fi сеть на технологии блокчейн</title>
+</head>
+
+<body>
+    <div class="dashboard__wrapper">
+        <div class="dashboard">
+            <a href="#" class="dashboard__close">
+                <img src="img/icon_close.svg" alt="" class="close__icon">
+            </a>
+            <ul class="dashboard__menu">
+                <li class="dashboard__item dashboard__item--active">
+                    <a href="#" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_dashboard.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_dashboard_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Dashboard
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="campaign.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_control.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_control_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Управление рекламой
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="referal.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_link.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_link_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Реферальная программа
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="profile.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_user.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_user_hover.png" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Профиль
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="index.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_logout.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_logout_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Выйти
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard__block"></div>
+    </div>
+    <header class="header section header--profile">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__logo">
+                    <img src="img/logo.svg" alt="" class="logo">
+                    <img src="img/logo_2m.png" alt="" class="logo logo--hidden">
+                </div>
+                <a href="#" class="header__icon">
+                    <img src="img/icon_menu_close.svg" alt="" class="icon">
+                </a>
+                <div class="header__user">
+                    <a href="profile.html" class="user__link">
+                        <div class="user__avatar user__avatar--small">
+                            <img src="img/avatar.png" alt="" class="avatar">
+                        </div>
+                        <div class="user__name">
+                            Константин Симферопольский
+                        </div>
+                    </a>
+                    <div class="header__selector">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                data-offset="-25, 10">
+                                <img src="img/rus.svg" alt="" class="selector__pic"> РУС
+                                <img src="img/arrow.png" alt="" class="arrow">
+                            </a>
+                            <div class="dropdown-menu language-field" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/en.svg" alt="" class="selector__pic"> eng</a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/en.svg" alt="" class="selector__pic"> eng</a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/en.svg" alt="" class="selector__pic"> eng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="panel">
+                        <div class="panel__title">Кампании
+                            <div class="panel__input">
+                                <input type="text" class="input__date" name="daterange">
+                                <div class="input__subtitle">
+                                    выбрать дату
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart__container">
+                            <canvas id="myChart1"></canvas>
+                        </div>
+                        <a href="#" class="panel__link">
+                            <img src="img/plus.png" alt="" class="panel__icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="panel">
+                        <div class="panel__top">
+                            <div class="search__field">
+                                <input type="text" class="search__input" placeholder="Поиск кампаний">
+                                <img src="img/icons/search.png" alt="" class="search__icon">
+                            </div>
+                            <div class="settings__bar">
+                                <ul class="settings__list">
+                                    <li class="settings__item">
+                                        <a href="#" class="settings__link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <img src="img/icons/filter.png" alt="" class="settings__icon">
+                                            <img src="img/icons/filter_hover.png" alt="" class="settings__icon--hidden">
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu--company" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item dropdown-item--title" href="#">Сегментация</a>
+                                            <a class="dropdown-item" href="#">Нет</a>
+                                            <a class="dropdown-item" href="#">Время</a>
+                                            <a class="dropdown-item" href="#">Тип клика</a>
+                                            <a class="dropdown-item" href="#">Конверсия</a>
+                                            <a class="dropdown-item" href="#">Устройство</a>
+                                            <a class="dropdown-item" href="#">Сеть (с поисковыми парнерами)</a>
+                                        </div>
+                                    </li>
+                                    <li class="settings__item">
+                                        <a href="#" class="settings__link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <img src="img/icons/segment.png" alt="" class="settings__icon">
+                                            <img src="img/icons/segment_hover.png" alt="" class="settings__icon--hidden">
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu--company" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item dropdown-item--title" href="#">Сегментация</a>
+                                            <a class="dropdown-item" href="#">Нет</a>
+                                            <a class="dropdown-item" href="#">Время</a>
+                                            <a class="dropdown-item" href="#">Тип клика</a>
+                                            <a class="dropdown-item" href="#">Конверсия</a>
+                                            <a class="dropdown-item" href="#">Устройство</a>
+                                            <a class="dropdown-item" href="#">Сеть (с поисковыми парнерами)</a>
+                                        </div>
+                                    </li>
+                                    <li class="settings__item">
+                                        <a href="#" class="settings__link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <img src="img/icons/columns.png" alt="" class="settings__icon">
+                                            <img src="img/icons/columns_hover.png" alt="" class="settings__icon--hidden">
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu--company" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item dropdown-item--title" href="#">Сегментация</a>
+                                            <a class="dropdown-item" href="#">Нет</a>
+                                            <a class="dropdown-item" href="#">Время</a>
+                                            <a class="dropdown-item" href="#">Тип клика</a>
+                                            <a class="dropdown-item" href="#">Конверсия</a>
+                                            <a class="dropdown-item" href="#">Устройство</a>
+                                            <a class="dropdown-item" href="#">Сеть (с поисковыми парнерами)</a>
+                                        </div>
+                                    </li>
+                                    <li class="settings__item">
+                                        <a href="#" class="settings__link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <img src="img/icons/download.png" alt="" class="settings__icon">
+                                            <img src="img/icons/download_hover.png" alt="" class="settings__icon--hidden">
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu--company" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Excel.csv</a>
+                                            <a class="dropdown-item" href="#">.csv</a>
+                                            <a class="dropdown-item" href="#">.tsv</a>
+                                            <a class="dropdown-item" href="#">PDF</a>
+                                            <a class="dropdown-item" href="#">XLSX</a>
+                                            <a class="dropdown-item" href="#">.xml</a>
+                                            <div class="line"></div>
+                                            <a class="dropdown-item" href="#">Отправить по электронной почте сейчас</a>
+                                            <a class="dropdown-item" href="#">Расписание</a>
+                                            <a class="dropdown-item" href="#">Дополнительные параметры</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel__title">
+                            <div class="filter__block">
+                                <a href="#" class="settings__link">
+                                    <img src="img/icons/filter_hover_2.png" alt="" class="settings__icon">
+                                    <img src="img/icons/filter_hover.png" alt="" class="settings__icon--hidden">
+                                </a>
+                                <input type="text" class="filter__input" value="Статус: все, кроме удаленных">
+                            </div>
+                        </div>
+                        <div class="company__table">
+                            <table class="table">
+                                <thead>
+                                    <tr class="table-light">
+                                        <th>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/Checkbox.png" alt="" class="table__icon">
+                                                <img src="img/icons/Checkbox _selected.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/company.png" alt="" class="table__icon">
+                                                <img src="img/icons/company_pause.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </th>
+                                        <th>Кампания</th>
+                                        <th>Бюджет</th>
+                                        <th>Статус</th>
+                                        <th>Тип стратегии, назначение ставок</th>
+                                        <th>Тип кампании</th>
+                                        <th>Клики</th>
+                                        <th>Показы</th>
+                                        <th>CTR</th>
+                                        <th>Средняя цена за клик</th>
+                                        <th>Стоимость</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/Checkbox.png" alt="" class="table__icon">
+                                                <img src="img/icons/Checkbox _selected.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="table__link table__link--active">
+                                                <img src="img/icons/company.png" alt="" class="table__icon">
+                                                <img src="img/icons/company_pause.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>КМС Ксения</td>
+                                        <td>10 000</td>
+                                        <td>остановлен</td>
+                                        <td>назначение</td>
+                                        <td>Контекстно-медийная</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                    </tr>
+                                    <tr class="table-light">
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/Checkbox.png" alt="" class="table__icon">
+                                                <img src="img/icons/Checkbox _selected.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/company.png" alt="" class="table__icon">
+                                                <img src="img/icons/company_pause.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>КМС Ксения</td>
+                                        <td>10 000</td>
+                                        <td>остановлен</td>
+                                        <td>назначение</td>
+                                        <td>Контекстно-медийная</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/Checkbox.png" alt="" class="table__icon">
+                                                <img src="img/icons/Checkbox _selected.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/company.png" alt="" class="table__icon">
+                                                <img src="img/icons/company_pause.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>КМС Ксения</td>
+                                        <td>10 000</td>
+                                        <td>остановлен</td>
+                                        <td>назначение</td>
+                                        <td>Контекстно-медийная</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                    </tr>
+                                    <tr class="table-light">
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/Checkbox.png" alt="" class="table__icon">
+                                                <img src="img/icons/Checkbox _selected.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/company.png" alt="" class="table__icon">
+                                                <img src="img/icons/company_pause.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>КМС Ксения</td>
+                                        <td>10 000</td>
+                                        <td>остановлен</td>
+                                        <td>назначение</td>
+                                        <td>Контекстно-медийная</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/Checkbox.png" alt="" class="table__icon">
+                                                <img src="img/icons/Checkbox _selected.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/company.png" alt="" class="table__icon">
+                                                <img src="img/icons/company_pause.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>КМС Ксения</td>
+                                        <td>10 000</td>
+                                        <td>остановлен</td>
+                                        <td>назначение</td>
+                                        <td>Контекстно-медийная</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                    </tr>
+                                    <tr class="table-light">
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/Checkbox.png" alt="" class="table__icon">
+                                                <img src="img/icons/Checkbox _selected.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="table__link">
+                                                <img src="img/icons/company.png" alt="" class="table__icon">
+                                                <img src="img/icons/company_pause.png" alt="" class="table__icon--hidden">
+                                            </a>
+                                        </td>
+                                        <td>КМС Ксения</td>
+                                        <td>10 000</td>
+                                        <td>остановлен</td>
+                                        <td>назначение</td>
+                                        <td>Контекстно-медийная</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                        <td>0000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pagination__block">
+                                <nav aria-label="Page navigation example" class="pagination__nav">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" tabindex="-1">
+                                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Страница 1 из 5</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="plugins/datepicker/moment.min.js"></script>
+    <script src="plugins/datepicker/daterangepicker.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/charts-company.js"></script>
+</body>

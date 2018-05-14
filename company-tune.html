@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="Robots" content="INDEX, FOLLOW"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=1000, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <link rel="stylesheet" href="plugins/datepicker/daterangepicker.css">
+    <link rel="stylesheet" href="plugins/nice-select/nice-select.css">
+    <link rel="stylesheet" href="plugins/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="plugins/jquery.tagsinput.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>World Wi-Fi – децентрализованная бесплатная Wi-Fi сеть на технологии блокчейн</title>
+</head>
+
+<body>
+    <div class="dashboard__wrapper">
+        <div class="dashboard">
+            <a href="#" class="dashboard__close">
+                <img src="img/icon_close.svg" alt="" class="close__icon">
+            </a>
+            <ul class="dashboard__menu">
+                <li class="dashboard__item dashboard__item--active">
+                    <a href="#" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_dashboard.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_dashboard_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Dashboard
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="campaign.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_control.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_control_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Управление рекламой
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="referal.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_link.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_link_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Реферальная программа
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="profile.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_user.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_user_hover.png" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Профиль
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="index.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_logout.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_logout_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Выйти
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard__block"></div>
+    </div>
+    <header class="header section header--profile">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__logo">
+                    <img src="img/logo.svg" alt="" class="logo">
+                    <img src="img/logo_2m.png" alt="" class="logo logo--hidden">
+                </div>
+                <a href="#" class="header__icon">
+                    <img src="img/icon_menu_close.svg" alt="" class="icon">
+                </a>
+                <div class="header__user">
+                    <a href="profile.html" class="user__link">
+                        <div class="user__avatar user__avatar--small">
+                            <img src="img/avatar.png" alt="" class="avatar">
+                        </div>
+                        <div class="user__name">
+                            Константин Симферопольский
+                        </div>
+                    </a>
+                    <div class="header__selector">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                data-offset="-25, 10">
+                                <img src="img/rus.svg" alt="" class="selector__pic"> РУС
+                                <img src="img/arrow.png" alt="" class="arrow">
+                            </a>
+                            <div class="dropdown-menu language-field" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/en.svg" alt="" class="selector__pic"> eng</a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/en.svg" alt="" class="selector__pic"> eng</a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/en.svg" alt="" class="selector__pic"> eng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section content">
+        <div class="container">
+            <div class="tune__top">
+                <div class="tune__top-title">Выбор типа кампании | </div>
+                <a href="#" class="tune__top-link">Desktop кампания</a>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="tune__form">
+                        <form action="/" class="tune__form-elem">
+                            <div class="tune__block">
+                                <label for="name" class="tune__title">Название кампании</label>
+                                <input type="text" class="tune__input" name="name" id="name">
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__title">Выбор типа баннера</div>
+                                <input type="checkbox" name="check1" id="check1" class="tune__input tune__input--check" hidden>
+                                <label for="check1" class="tune__label tune__label--check">Только 3-party теги</label>
+                                <input type="checkbox" name="check2" id="check2" class="tune__input tune__input--check" hidden>
+                                <label for="check2" class="tune__label tune__label--check">Все типы баннеров</label>
+                            </div>
+                            <div class="tune__block">
+                                <label for="adres" class="tune__title">Адрес целевой страницы</label>
+                                <select class="tune__input" name="adres" id="adres">
+
+                                </select>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__title tune__title--big">Бюджет</div>
+                                <div class="tune__title">Стратегия ведения кампании</div>
+                                <input type="checkbox" name="check3" id="check3" class="tune__input tune__input--check" hidden>
+                                <label for="check3" class="tune__label tune__label--check">бюджет</label>
+                                <input type="checkbox" name="check4" id="check4" class="tune__input tune__input--check" hidden>
+                                <label for="check4" class="tune__label tune__label--check">клики</label>
+                                <input type="checkbox" name="check5" id="check5" class="tune__input tune__input--check" hidden>
+                                <label for="check5" class="tune__label tune__label--check">показы</label>
+                            </div>
+                            <div class="tune__block">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="budget" class="tune__label">Дневной бюджет (обязательно)</label>
+                                        <select class="tune__input" name="budget" id="budget">
+
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="budget1" class="tune__label">Общий бюджет (необязательно)</label>
+                                        <select class="tune__input" name="budget1" id="budget1">
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__title">Распределение бюджета</div>
+                                <input type="checkbox" name="check6" id="check6" class="tune__input tune__input--check" hidden>
+                                <label for="check6" class="tune__label tune__label--check">равномерное
+                                    <span class="tune__subtext">- показывать объявления равномерно в течение дня</span>
+                                </label>
+                                <input type="checkbox" name="check7" id="check7" class="tune__input tune__input--check" hidden>
+                                <label for="check7" class="tune__label tune__label--check">ускоренное
+                                    <span class="tune__subtext">- показывать объявления как можно чаще</span>
+                                </label>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__title">Стратегия закупки на основе технологии SmartBid</div>
+                                <input type="checkbox" name="check8" id="check8" class="tune__input tune__input--check" hidden>
+                                <label for="check8" class="tune__label tune__label--check">оптимизация по показам</label>
+                                <input type="checkbox" name="check9" id="check9" class="tune__input tune__input--check" hidden>
+                                <label for="check9" class="tune__label tune__label--check">оптимизация по стоимости клика</label>
+                                <input type="checkbox" name="check10" id="check10" class="tune__input tune__input--check" hidden>
+                                <label for="check10" class="tune__label tune__label--check">без оптимизации</label>
+                                <div class="tune__group">
+                                    <input type="number" class="tune__input tune__input--small" value="20" name="cost" id="cost">
+                                    <span class="tune__currency">P</span>
+                                    <span class="tune__button">за тысячу показов</span>
+                                    <div class="tune__sub">ставки других рекламодателей 14 - 30р</div>
+                                </div>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__title">Когда вы хотите запустить кампанию</div>
+                                <input type="checkbox" name="check11" id="check11" class="tune__input tune__input--check" hidden>
+                                <label for="check11" class="tune__label tune__label--check">запустить сейчас, показывать непрерывно</label>
+                                <input type="checkbox" name="check12" id="check12" class="tune__input tune__input--check" hidden>
+                                <label for="check12" class="tune__label tune__label--check">установить дату начала и завершения</label>
+                            </div>
+                            <div class="tune__block">
+                                <a href="#" class="tune__link">+ Время и дни показа</a>
+                                <a href="#" class="tune__link">+ Частота показа</a>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__title tune__title--big">Местоположение</div>
+                                <div class="tune__title">Геотаргетинг</div>
+                                <div class="tune__group tune__group--full">
+                                    <input type="text" class="tune__input" placeholder="Найдите местополжение" name="geotargeting" id="geotargeting">
+                                    <a href="#" class="tune__button" data-toggle="modal" data-target="#exampleModalCenter">просмотр</a>
+                                </div>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__title tune__title--big">Дополнительные параметры</div>
+                                <div class="tune__label">Браузер
+                                    <a href="#" class="tune__link">| удалить таргетинг</a>
+                                </div>
+                                <div class="tune__top tune__top--small">
+                                    <div class="tune__top-title">Добавленные браузеры</div>
+                                    <a href="#" class="tune__top-link">Все браузеры</a>
+                                </div>
+                                <div class="tune__group tune__group--full">
+                                    <input type="text" class="tune__input" placeholder="Найти браузер" name="browser" id="browser">
+                                    <a href="#" class="tune__button">просмотр</a>
+                                </div>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label">Пол
+                                    <a href="#" class="tune__link">| удалить таргетинг</a>
+                                </div>
+                                <input type="checkbox" name="check13" id="check13" class="tune__input tune__input--check" hidden>
+                                <label for="check13" class="tune__label tune__label--check">мужчины</label>
+                                <input type="checkbox" name="check14" id="check14" class="tune__input tune__input--check" hidden>
+                                <label for="check14" class="tune__label tune__label--check">женщины</label>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label">Тип устройства
+                                    <a href="#" class="tune__link">| удалить таргетинг</a>
+                                </div>
+                                <input type="checkbox" name="check15" id="check15" class="tune__input tune__input--check" hidden>
+                                <label for="check15" class="tune__label tune__label--check">компьютеры</label>
+                                <input type="checkbox" name="check16" id="check16" class="tune__input tune__input--check" hidden>
+                                <label for="check16" class="tune__label tune__label--check">мобильные телефоны</label>
+                                <input type="checkbox" name="check17" id="check17" class="tune__input tune__input--check" hidden>
+                                <label for="check17" class="tune__label tune__label--check">планшеты</label>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label mb-3">TV Sync
+                                    <a href="#" class="tune__link">| не использовать таргетинг TV Sync</a>
+                                </div>
+                                <div class="tune__label">Идентификатор рекламы по каталогу TNS</div>
+                                <div class="tune__row">
+                                    <input type="text" class="tune__input" name="id" id="id">
+                                    <a href="#" class="reset">X</a>
+                                </div>
+                                <a href="#" class="tune__button tune__button--full">+ добавить поле</a>
+                            </div>
+                            <div class="tune__block">
+                                <label for="time" class="tune__label">Время показа в минутах</label>
+                                <div class="tune__row">
+                                    <input type="text" class="tune__input" name="time" id="time">
+                                </div>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label mb-3">Погодные условия
+                                    <a href="#" class="tune__link">| не использовать таргетинг по погоде</a>
+                                </div>
+                                <div class="tune__label">
+                                    Выберите тип осадков
+                                </div>
+                                <div class="row full">
+                                    <div class="col-6">
+                                        <div class="tune__check">
+                                            <input type="checkbox" name="check18" id="check18" class="tune__input tune__input--check" hidden>
+                                            <label for="check18" class="tune__label tune__label--check">без осадков</label>
+                                            <input type="checkbox" name="check19" id="check19" class="tune__input tune__input--check" hidden>
+                                            <label for="check19" class="tune__label tune__label--check">местами/возможен дождь</label>
+                                            <input type="checkbox" name="check20" id="check20" class="tune__input tune__input--check" hidden>
+                                            <label for="check20" class="tune__label tune__label--check">дождь</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="tune__check">
+                                            <input type="checkbox" name="check21" id="check21" class="tune__input tune__input--check" hidden>
+                                            <label for="check21" class="tune__label tune__label--check">сильный дождь/ливень</label>
+                                            <input type="checkbox" name="check22" id="check22" class="tune__input tune__input--check" hidden>
+                                            <label for="check22" class="tune__label tune__label--check">снег</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label mb-3">Укажите минимальную и максимульную температуру</div>
+                                <div class="tune__row">
+                                    <div class="tune__label">Выбранная температура: от</div>
+                                    <select class="tune__input tune__input--temperature" name="temp" id="temp">
+
+                                    </select>
+                                    <div class="tune__label">до</div>
+                                    <select class="tune__input tune__input--temperature" name="temp1" id="temp1">
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label mb-3">Не показывать на анонимных ресурсах (для опытных пользователей)
+                                    <a href="#" class="tune__link">| удалитьтаргетинг</a>
+                                </div>
+                                <input type="checkbox" name="check23" id="check23" class="tune__input tune__input--check" hidden>
+                                <label for="check23" class="tune__label tune__label--check">не показывать на анонимных ресурсах</label>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label mb-3">Включить защиту бренда на основе Friendly Index
+                                    <a href="#" class="tune__link">| удалить таргетинг</a>
+                                </div>
+                                <input type="checkbox" name="check24" id="check24" class="tune__input tune__input--check" hidden>
+                                <label for="check24" class="tune__label tune__label--check">включить защиту бренда на основе Friendly Index</label>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label mb-3">Добавить счетчик показов сторонних систем
+                                    <a href="#" class="tune__link">| удалить таргетинг</a>
+                                </div>
+                                <div class="tune__row">
+                                    <input type="text" class="tune__input" placeholder="Ссылка на показ" name="counter" id="counter">
+                                    <a href="#" class="reset">X</a>
+                                </div>
+                                <a href="#" class="tune__button tune__button--full">+ добавить счетчик показов</a>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label">Таргетинг по IP
+                                    <a href="#" class="tune__link">| удалить таргетинг</a>
+                                </div>
+                                <a href="#" class="tune__button tune__button--full mb-2">импорт множества IP адресов</a>
+                                <input type="checkbox" name="check25" id="check25" class="tune__input tune__input--check" hidden>
+                                <label for="check25" class="tune__label tune__label--check">IP адрес</label>
+                                <input type="checkbox" name="check26" id="check26" class="tune__input tune__input--check" hidden>
+                                <label for="check26" class="tune__label tune__label--check">диапазон IP адресов</label>
+                                <input type="checkbox" name="check27" id="check27" class="tune__input tune__input--check" hidden>
+                                <label for="check27" class="tune__label tune__label--check">маска</label>
+                                <div class="tune__row mt-2">
+                                    <input type="text" class="tune__input" name="mask" id="mask" placeholder="xxx.xxx.xxx.xxx">
+                                    <a href="#" class="tune__button tune__button--add">+ добавить</a>
+                                </div>
+                            </div>
+                            <div class="tune__block">
+                                <div class="tune__label mb-2">Добавить таргетинг на места размещения в Skype
+                                    <a href="#" class="tune__link">| удалить таргетинг</a>
+                                </div>
+                                <input type="checkbox" name="check28" id="check28" class="tune__input tune__input--check" hidden>
+                                <label for="check28" class="tune__label tune__label--check">Skype homepage 300x250</label>
+                                <input type="checkbox" name="check29" id="check29" class="tune__input tune__input--check" hidden>
+                                <label for="check29" class="tune__label tune__label--check">Skype converstion ad 300x250</label>
+                                <input type="checkbox" name="check30" id="check30" class="tune__input tune__input--check" hidden>
+                                <label for="check30" class="tune__label tune__label--check">Skype connection hub 728x90</label>
+                                <input type="checkbox" name="check31" id="check31" class="tune__input tune__input--check" hidden>
+                                <label for="check31" class="tune__label tune__label--check">Skype connection hub 300x250</label>
+                                <input type="checkbox" name="check32" id="check32" class="tune__input tune__input--check" hidden>
+                                <label for="check32" class="tune__label tune__label--check">Skype connection hub 160x600</label>
+                                <input type="checkbox" name="check33" id="check33" class="tune__input tune__input--check" hidden>
+                                <label for="check33" class="tune__label tune__label--check">Skype connection hub 300x600</label>
+                                <input type="checkbox" name="check34" id="check34" class="tune__input tune__input--check" hidden>
+                                <label for="check34" class="tune__label tune__label--check">Skype homepage 300x250</label>
+                                <input type="checkbox" name="check35" id="check35" class="tune__input tune__input--check" hidden>
+                                <label for="check35" class="tune__label tune__label--check">Skype converstion ad 300x250</label>
+                                <input type="checkbox" name="check36" id="check36" class="tune__input tune__input--check" hidden>
+                                <label for="check36" class="tune__label tune__label--check">Skype connection hub 728x90</label>
+                            </div>
+                            <button type="submit" class="tune__button tune__button--full">Сохранить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    </footer>
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="tune__label" id="exampleModalLongTitle">Геотаргетинг</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="map__block" id="map"></div>
+                    <input name="tags" id="tags" value="1,2,3">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="plugins/datepicker/moment.min.js"></script>
+    <script src="plugins/datepicker/daterangepicker.js"></script>
+    <script src="plugins/nice-select/jquery.nice-select.min.js"></script>
+    <script src="plugins/jquery.mask.js"></script>
+    <script src="plugins/jquery.tagsinput.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/charts.js"></script>
+</body>

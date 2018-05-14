@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="Robots" content="INDEX, FOLLOW"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=1000, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <link rel="stylesheet" href="plugins/datepicker/daterangepicker.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>World Wi-Fi – децентрализованная бесплатная Wi-Fi сеть на технологии блокчейн</title>
+</head>
+
+<body>
+    <div class="dashboard__wrapper">
+        <div class="dashboard">
+            <a href="#" class="dashboard__close">
+                <img src="img/icon_close.svg" alt="" class="close__icon">
+            </a>
+            <ul class="dashboard__menu">
+                <li class="dashboard__item dashboard__item--active">
+                    <a href="#" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_dashboard.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_dashboard_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Dashboard
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="campaign.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_control.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_control_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Управление рекламой
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="referal.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_link.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_link_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Реферальная программа
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="profile.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_user.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_user_hover.png" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Профиль
+                        </div>
+                    </a>
+                </li>
+                <li class="dashboard__item">
+                    <a href="index.html" class="dashboard__link">
+                        <div class="dashboard__icons">
+                            <img src="img/icon_logout.svg" alt="" class="dashboard__icon">
+                            <img src="img/icon_logout_hover.svg" alt="" class="dashboard__icon dashboard__icon--hidden">
+                        </div>
+                        <div class="dahboard__name">
+                            Выйти
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard__block"></div>
+    </div>
+    <header class="header section header--profile">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__logo">
+                    <img src="img/logo.svg" alt="" class="logo">
+                    <img src="img/logo_2m.png" alt="" class="logo logo--hidden">
+                </div>
+                <a href="#" class="header__icon">
+                    <img src="img/icon_menu_close.svg" alt="" class="icon">
+                </a>
+                <div class="header__user">
+                    <a href="profile.html" class="user__link">
+                        <div class="user__avatar user__avatar--small">
+                            <img src="img/avatar.png" alt="" class="avatar">
+                        </div>
+                        <div class="user__name">
+                            Константин Симферопольский
+                        </div>
+                    </a>
+                    <div class="header__selector">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                data-offset="-25, 10">
+                                <img src="img/rus.svg" alt="" class="selector__pic"> РУС
+                                <img src="img/arrow.png" alt="" class="arrow">
+                            </a>
+                            <div class="dropdown-menu language-field" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/en.svg" alt="" class="selector__pic"> eng</a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/en.svg" alt="" class="selector__pic"> eng</a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/en.svg" alt="" class="selector__pic"> eng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="panel">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="info__block">
+                        <div class="info__panel info__panel--date">
+                            <input type="text" class="input__date" name="daterange">
+                            <div class="input__subtitle">
+                                выбрать дату
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="info__panel info__panel--balance">
+                            <div class="info__side">Баланс</div>
+                            <div class="info__right-side">37,70</div>
+                        </div>
+                        <div class="info__panel info__panel--benefit">
+                            <div class="info__side">Выручка</div>
+                            <div class="info__right-side">37,70</div>
+                        </div>
+                        <div class="info__panel info__panel--loss">
+                            <div class="info__side">Затраты</div>
+                            <div class="info__right-side">944</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel">
+                        <div class="panel__title">Кампании</div>
+                        <table class="table campaign__table">
+                            <thead>
+                                <tr class="table-light">
+                                    <th></th>
+                                    <th>Стоимость</th>
+                                    <th>Конверсия</th>
+                                    <th>Стоимость</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination__block">
+                            <nav aria-label="Page navigation example" class="pagination__nav">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" tabindex="-1">
+                                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Страница 1 из 5</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel">
+                        <div class="panel__title">Кампании</div>
+                        <table class="table campaign__table">
+                            <thead>
+                                <tr class="table-light">
+                                    <th></th>
+                                    <th>CTR</th>
+                                    <th>CPC</th>
+                                    <th>CPM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="campaign__name">
+                                        Название
+                                    </td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                    <td class="campaign__conversion">4, 00</td>
+                                    <td class="campaign__cost">
+                                        <div class="cost__rub">40 000 Р</div>
+                                        <div class="cost__usd">7 333,62 $</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination__block">
+                            <nav aria-label="Page navigation example" class="pagination__nav">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" tabindex="-1">
+                                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Страница 1 из 5</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel">
+                        <div class="panel__title">Устройства</div>
+                        <div class="progress__titles">
+                            <div class="title__item title__item--1">
+                                <div class="circle"></div>
+                                <div class="title__text">Телефоны</div>
+                                <div class="item__desc">
+                                    <div class="desc__title">
+                                        <div class="circle"></div>
+                                        <div class="title__text">Телефоны</div>
+                                    </div>
+                                    <div class="desc__text">Стоимость</div>
+                                    <div class="desc__amount">1 841 324 $</div>
+                                    <div class="desc__text">(69,10% от общего объема)</div>
+                                </div>
+                            </div>
+                            <div class="title__item title__item--2">
+                                <div class="circle"></div>
+                                <div class="title__text">Планшеты</div>
+                                <div class="item__desc">
+                                    <div class="desc__title">
+                                        <div class="circle"></div>
+                                        <div class="title__text">Планшеты</div>
+                                    </div>
+                                    <div class="desc__text">Стоимость</div>
+                                    <div class="desc__amount">1 841 324 $</div>
+                                    <div class="desc__text">(69,10% от общего объема)</div>
+                                </div>
+                            </div>
+                            <div class="title__item title__item--3">
+                                <div class="circle"></div>
+                                <div class="title__text">Ноутбуки</div>
+                                <div class="item__desc">
+                                    <div class="desc__title">
+                                        <div class="circle"></div>
+                                        <div class="title__text">Ноутбуки</div>
+                                    </div>
+                                    <div class="desc__text">Стоимость</div>
+                                    <div class="desc__amount">1 841 324 $</div>
+                                    <div class="desc__text">(69,10% от общего объема)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress__row">
+                                <div class="progress__bar progress__bar--cost">
+                                    <div class="progress__item progress__item--1"></div>
+                                    <div class="progress__item progress__item--2"></div>
+                                    <div class="progress__item progress__item--3"></div>
+                                </div>
+                                <div class="progress__title">
+                                    <a href="#" class="progress__link">
+                                        cтоимость
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="options">
+                                        <ul class="options__list">
+                                            <li class="options__item options__item--active">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Число показов</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">CTR</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Средняя цена за клик</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Конверсия</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Коэфф. конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Ценность конверсии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress__row">
+                                <div class="progress__bar progress__bar--click">
+                                    <div class="progress__item progress__item--1"></div>
+                                    <div class="progress__item progress__item--2"></div>
+                                    <div class="progress__item progress__item--3"></div>
+                                </div>
+                                <div class="progress__title">
+                                    <a href="#" class="progress__link">
+                                        клики
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="options">
+                                        <ul class="options__list">
+                                            <li class="options__item options__item--active">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Число показов</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">CTR</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Средняя цена за клик</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Конверсия</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Коэфф. конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Ценность конверсии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress__row">
+                                <div class="progress__bar progress__bar--conversion">
+                                    <div class="progress__item progress__item--1"></div>
+                                    <div class="progress__item progress__item--2"></div>
+                                    <div class="progress__item progress__item--3"></div>
+                                </div>
+                                <div class="progress__title">
+                                    <a href="#" class="progress__link">
+                                        конверсия
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="options">
+                                        <ul class="options__list">
+                                            <li class="options__item options__item--active">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Число показов</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">CTR</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Средняя цена за клик</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Конверсия</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Коэфф. конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Ценность конверсии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel">
+                        <div class="panel__title">М | Ж возраст</div>
+                        <div class="progress__titles">
+                            <div class="title__item title__item--1">
+                                <div class="circle"></div>
+                                <div class="title__text">Телефоны</div>
+                                <div class="item__desc">
+                                    <div class="desc__title">
+                                        <div class="circle"></div>
+                                        <div class="title__text">Телефоны</div>
+                                    </div>
+                                    <div class="desc__text">Стоимость</div>
+                                    <div class="desc__amount">1 841 324 $</div>
+                                    <div class="desc__text">(69,10% от общего объема)</div>
+                                </div>
+                            </div>
+                            <div class="title__item title__item--2">
+                                <div class="circle"></div>
+                                <div class="title__text">Планшеты</div>
+                                <div class="item__desc">
+                                    <div class="desc__title">
+                                        <div class="circle"></div>
+                                        <div class="title__text">Планшеты</div>
+                                    </div>
+                                    <div class="desc__text">Стоимость</div>
+                                    <div class="desc__amount">1 841 324 $</div>
+                                    <div class="desc__text">(69,10% от общего объема)</div>
+                                </div>
+                            </div>
+                            <div class="title__item title__item--3">
+                                <div class="circle"></div>
+                                <div class="title__text">Ноутбуки</div>
+                                <div class="item__desc">
+                                    <div class="desc__title">
+                                        <div class="circle"></div>
+                                        <div class="title__text">Ноутбуки</div>
+                                    </div>
+                                    <div class="desc__text">Стоимость</div>
+                                    <div class="desc__amount">1 841 324 $</div>
+                                    <div class="desc__text">(69,10% от общего объема)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress__row">
+                                <div class="progress__bar progress__bar--cost">
+                                    <div class="progress__item progress__item--1"></div>
+                                    <div class="progress__item progress__item--2"></div>
+                                    <div class="progress__item progress__item--3"></div>
+                                </div>
+                                <div class="progress__title">
+                                    <a href="#" class="progress__link">
+                                        cтоимость
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="options">
+                                        <ul class="options__list">
+                                            <li class="options__item options__item--active">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Число показов</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">CTR</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Средняя цена за клик</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Конверсия</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Коэфф. конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Ценность конверсии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress__row">
+                                <div class="progress__bar progress__bar--click">
+                                    <div class="progress__item progress__item--1"></div>
+                                    <div class="progress__item progress__item--2"></div>
+                                    <div class="progress__item progress__item--3"></div>
+                                </div>
+                                <div class="progress__title">
+                                    <a href="#" class="progress__link">
+                                        клики
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="options">
+                                        <ul class="options__list">
+                                            <li class="options__item options__item--active">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Число показов</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">CTR</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Средняя цена за клик</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Конверсия</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Коэфф. конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Ценность конверсии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress__row">
+                                <div class="progress__bar progress__bar--conversion">
+                                    <div class="progress__item progress__item--1"></div>
+                                    <div class="progress__item progress__item--2"></div>
+                                    <div class="progress__item progress__item--3"></div>
+                                </div>
+                                <div class="progress__title">
+                                    <a href="#" class="progress__link">
+                                        конверсия
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="options">
+                                        <ul class="options__list">
+                                            <li class="options__item options__item--active">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Число показов</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">CTR</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Средняя цена за клик</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Конверсия</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Коэфф. конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Ценность конверсии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel">
+                        <div class="panel__title">Аудитория</div>
+                        <div class="progress__titles">
+                            <div class="title__item title__item--1">
+                                <div class="circle"></div>
+                                <div class="title__text">Телефоны</div>
+                                <div class="item__desc">
+                                    <div class="desc__title">
+                                        <div class="circle"></div>
+                                        <div class="title__text">Телефоны</div>
+                                    </div>
+                                    <div class="desc__text">Стоимость</div>
+                                    <div class="desc__amount">1 841 324 $</div>
+                                    <div class="desc__text">(69,10% от общего объема)</div>
+                                </div>
+                            </div>
+                            <div class="title__item title__item--2">
+                                <div class="circle"></div>
+                                <div class="title__text">Планшеты</div>
+                                <div class="item__desc">
+                                    <div class="desc__title">
+                                        <div class="circle"></div>
+                                        <div class="title__text">Планшеты</div>
+                                    </div>
+                                    <div class="desc__text">Стоимость</div>
+                                    <div class="desc__amount">1 841 324 $</div>
+                                    <div class="desc__text">(69,10% от общего объема)</div>
+                                </div>
+                            </div>
+                            <div class="title__item title__item--3">
+                                <div class="circle"></div>
+                                <div class="title__text">Ноутбуки</div>
+                                <div class="item__desc">
+                                    <div class="desc__title">
+                                        <div class="circle"></div>
+                                        <div class="title__text">Ноутбуки</div>
+                                    </div>
+                                    <div class="desc__text">Стоимость</div>
+                                    <div class="desc__amount">1 841 324 $</div>
+                                    <div class="desc__text">(69,10% от общего объема)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress__row">
+                                <div class="progress__bar progress__bar--cost">
+                                    <div class="progress__item progress__item--1"></div>
+                                    <div class="progress__item progress__item--2"></div>
+                                    <div class="progress__item progress__item--3"></div>
+                                </div>
+                                <div class="progress__title">
+                                    <a href="#" class="progress__link">
+                                        cтоимость
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="options">
+                                        <ul class="options__list">
+                                            <li class="options__item options__item--active">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Число показов</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">CTR</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Средняя цена за клик</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Конверсия</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Коэфф. конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Ценность конверсии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress__row">
+                                <div class="progress__bar progress__bar--click">
+                                    <div class="progress__item progress__item--1"></div>
+                                    <div class="progress__item progress__item--2"></div>
+                                    <div class="progress__item progress__item--3"></div>
+                                </div>
+                                <div class="progress__title">
+                                    <a href="#" class="progress__link">
+                                        клики
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="options">
+                                        <ul class="options__list">
+                                            <li class="options__item options__item--active">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Число показов</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">CTR</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Средняя цена за клик</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Конверсия</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Коэфф. конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Ценность конверсии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress__row">
+                                <div class="progress__bar progress__bar--conversion">
+                                    <div class="progress__item progress__item--1"></div>
+                                    <div class="progress__item progress__item--2"></div>
+                                    <div class="progress__item progress__item--3"></div>
+                                </div>
+                                <div class="progress__title">
+                                    <a href="#" class="progress__link">
+                                        конверсия
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="options">
+                                        <ul class="options__list">
+                                            <li class="options__item options__item--active">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Число показов</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">CTR</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Средняя цена за клик</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Конверсия</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Стоимость конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Коэфф. конверсии</a>
+                                            </li>
+                                            <li class="options__item">
+                                                <img src="img/check.png" alt="" class="options__pic">
+                                                <a href="#" class="options__link">Ценность конверсии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="plugins/datepicker/moment.min.js"></script>
+    <script src="plugins/datepicker/daterangepicker.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/charts-view.js"></script>
+</body>
