@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-rim-auto-match" content="none">
+    <link rel="stylesheet" href="plugins/jquery-ui.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="favicon.ico" rel="shortcut icon">
     <title>World Wi-Fi – децентрализованная бесплатная Wi-Fi сеть на технологии блокчейн</title>
@@ -158,14 +159,10 @@
                         <div class="panel__title">Распределение канала</div>
                         <div class="channel__spread">
                             <div class="spread__numbers">
-                                <div class="spread__number">40%</div>
-                                <div class="spread__number spread__number--right">60%</div>
+                                <input type="text" class="spread__number" id="amount" readonly>
+                                <input type="text" class="spread__number spread__number--right" id="amount2" readonly>
                             </div>
-                            <div class="spread__bar">
-                                <div class="spread__status">
-                                    <div class="spread__dot"></div>
-                                </div>
-                            </div>
+                            <div id="slider-range-min"></div>
                             <div class="spread__labels">
                                 <div class="spread__label">Гостевая сеть</div>
                                 <div class="spread__label spread__label--right">Домашняя сеть</div>
@@ -228,6 +225,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="plugins/jquery-ui.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/range.js"></script>
     <script src="js/charts.js"></script>
 </body>
