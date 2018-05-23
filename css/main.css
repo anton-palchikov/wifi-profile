@@ -5276,6 +5276,7 @@ td:first-child {
 
 .tune__input--file {
   padding: 10px 20px;
+  width: initial;
 }
 
 .tune__input--file:hover {
@@ -5375,7 +5376,6 @@ td:first-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 60%;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -5394,6 +5394,13 @@ td:first-child {
 .tune__row .tune__input--temperature {
   width: 25%;
   margin: 0 10px;
+}
+
+.tune__row--tune {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 10px 0;
 }
 
 .reset {
@@ -5504,10 +5511,10 @@ td:first-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
