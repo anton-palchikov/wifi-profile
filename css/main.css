@@ -3025,6 +3025,16 @@ a:hover {
   width: 100px;
 }
 
+.btn--disable {
+  background-color: #CCCACD;
+  cursor: initial;
+}
+
+.btn--disable:hover {
+  background-color: #CCCACD;
+  cursor: initial;
+}
+
 .section__title {
   text-align: center;
   width: 100%;
