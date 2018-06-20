@@ -5981,6 +5981,62 @@ td:first-child {
   opacity: 0;
 }
 
+.types__content {
+  margin-top: 40px;
+}
+
+.types__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 40px 10px 20px;
+  margin: 15px 0;
+}
+
+.types__logo {
+  margin-right: 20px;
+}
+
+.types__desc {
+  color: #005885;
+}
+
+.types__title {
+  font-size: 18px;
+}
+
+.types__text {
+  font-size: 12px;
+}
+
+.disable-wrapper {
+  position: relative;
+  border: 2px solid #008075;
+  opacity: .5;
+}
+
+.disable__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(15deg);
+  -ms-transform: translate(-50%, -50%) rotate(15deg);
+  transform: translate(-50%, -50%) rotate(15deg);
+  color: #008075;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
 .info__block {
   height: 92%;
   display: -webkit-box;
