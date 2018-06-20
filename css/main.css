@@ -6000,7 +6000,11 @@ td:first-child {
   align-items: center;
   background-color: #fff;
   padding: 10px 40px 10px 20px;
-  margin: 15px 0;
+  margin-bottom: 30px;
+}
+
+.types__item:last-child {
+  margin-bottom: 0;
 }
 
 .types__logo {
