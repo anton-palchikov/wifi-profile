@@ -6027,6 +6027,7 @@ td:first-child {
   position: relative;
   border: 2px solid #008075;
   opacity: .5;
+  pointer-events: none;
 }
 
 .disable__text {
